@@ -4,3 +4,17 @@ version = "0.1.0"
 authors = ["Felix Schütt <felix.schuett@maps4print.com>"]
 
 [dependencies]
+failure = "0.1.0"
+log = "0.3.8"
+limn = { git = "https://github.com/christolliday/limn", rev = "09028cd4533b15ed6fea036e832ab1096fbe1bef" }
+lazy_static = "0.2.2"
+hyper = "0.11.6"
+hyper-tls = "0.1.2"
+ftp = "2.2.1"
+chrono = "0.4.0"
+dotenv = "0.10.1"
+
+[profile.release]
+debug=false
+lto=true
+panic='abort'
