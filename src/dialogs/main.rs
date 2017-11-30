@@ -3,7 +3,7 @@
 use limn::glutin;
 use limn::app::App;
 use limn::prelude::*;
-use limn::input::{EscKeyCloseHandler, DebugSettingsHandler};
+use limn::input::DebugSettingsHandler;
 
 pub const APP_TITLE: &'static str = "Explorer";
 pub const APP_MIN_WIDTH: u32 = 100;
@@ -27,8 +27,7 @@ impl MainDialog {
     {
         let window_builder = glutin::WindowBuilder::new()
             .with_title(initial_title)
-            .with_dimensions(width, height)
-            .with_min_dimensions(200, 60);
+            .with_dimensions(width, height);
 
         let events_loop = glutin::EventsLoop::new();
         let window = Window::new(window_builder, &events_loop);
@@ -49,14 +48,16 @@ impl MainDialog {
 
     /// Example: add a button
     pub fn add_button(&mut self) {
-        use limn::widgets::button::ToggleButtonStyle;
+        use limn::widgets::button::ButtonStyle;
 
-        let mut button = ToggleButtonStyle::default();
-        button.toggle_text("ON", "OFF");
+        let mut button = ButtonStyle::default();
+        button.text("Browse...");
         let mut button = WidgetBuilder::from_modifier_style(button);
         button.layout().add(constraints![
             center(&self.root),
-            bound_by(&self.root).padding(50.0).strength(WEAK),
+            bound_by(&self.root)
+            .padding(10.0)
+            .strength(WEAK),
         ]);
         self.root.add_child(button);
     }

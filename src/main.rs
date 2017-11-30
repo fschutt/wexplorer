@@ -7,6 +7,13 @@ extern crate ftp;
 extern crate chrono;
 extern crate dotenv;
 
+// LIMN BUGS
+// - Borders don't show if the corner_radius isn't set
+// - Border don't work in maximized mode (already reported)
+// - HighDPI factor doesn't work on Linux at all
+// - Available constraints are not documented at all
+// - Padding can only set globally, not padding_left, padding_right
+
 /// Module for all non-GUI stuff (core functionality)
 pub mod core;
 /// Module for all GUI-related stuff (calls into `core` when needed)
