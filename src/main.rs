@@ -24,9 +24,10 @@ pub mod integration;
 pub mod widgets;
 /// The core limn-styles for all widgets this application. Can be reused later on.
 pub mod style;
-/// Unit tests
-#[test]
-pub mod tests;
+
+// Unit tests
+// #[test]
+// mod tests;
 
 pub const APP_TITLE: &str = "Explorer";
 
