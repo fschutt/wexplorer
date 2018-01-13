@@ -25,9 +25,10 @@ parts:
       - cmake
       - pkg-config
       - libfreetype6-dev
+      - libexpat1-dev
     stage-packages:
       - libssl1.0.0
       - libudev1
       - libstdc++6
       - libfreetype6
-      
+      - libexpat1
