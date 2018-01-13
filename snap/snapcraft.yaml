@@ -15,7 +15,7 @@ apps:
 
 parts:
   wde-explorer:
-    source: ../
+    source: .
     plugin: rust
     build-attributes: [no-system-libraries]
     build-packages:
