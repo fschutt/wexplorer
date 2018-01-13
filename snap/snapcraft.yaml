@@ -22,6 +22,7 @@ parts:
       - libudev-dev
       - libssl-dev
       - make
+      - cmake
       - pkg-config
     stage-packages:
       - libssl1.0.0
