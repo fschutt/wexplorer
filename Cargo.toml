@@ -1,5 +1,5 @@
 [package]
-name = "wexplorer"
+name = "wde-explorer"
 version = "0.1.0"
 authors = ["Felix Schütt <felix.schuett@maps4print.com>"]
 
